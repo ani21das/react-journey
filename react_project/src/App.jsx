@@ -1,36 +1,23 @@
-import { useState } from 'react';
 import './App.css';
+import Card from './components/card';
 
 function App () {
 
-  let [ counter, setCounter ] = useState( 0 );
+  let myObj = {
+    username: "Anirban",
+    age: 23
+  }
 
-  const addValue = () => {
-    if ( counter < 20 )
-    {
-      counter = ++counter;
-    }
-    setCounter( counter );
-    console.log( "Clicked", counter );
-  };
+  let newArr=[1,2,3]
 
-  const removeValue = () => {
-    if ( counter > 0 )
-    {
-      counter = --counter;
-    }
-    setCounter( counter );
-    console.log( "Clicked;", counter );
-  };
+return (
+  <>
+    <h1 className='bg-green-400 text-black p-4 rounded-lg mb-4'>Tailwind Class</h1>
 
-  return (
-    <>
-      <h1>Counter value : { counter }</h1>
-      <br />
-      <button onClick={ addValue }>Add Value</button>
-      <br />
-      <button onClick={ removeValue }>Remove Value</button>
-    </>
+    <Card username="Anirban" btnText="Visit Me" /> 
+    <Card username="Kalyan" /> 
+
+  </>
   );
 }
 
