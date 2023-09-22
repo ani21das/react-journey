@@ -1,23 +1,17 @@
-import './App.css';
-import Card from './components/card';
+import { useState } from 'react';
 
 function App () {
 
-  let myObj = {
-    username: "Anirban",
-    age: 23
-  }
+  const [color,setColor] = useState( "olive" );
 
-  let newArr=[1,2,3]
-
-return (
+  return (
   <>
-    <h1 className='bg-green-400 text-black p-4 rounded-lg mb-4'>Tailwind Class</h1>
+  <div className="w-full h-screen duration-200" style={{backgroundColor:color}}>
 
-    <Card username="Anirban" btnText="Visit Me" /> 
-    <Card username="Kalyan" /> 
-
-  </>
+        <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2"></div>
+        
+  </div>
+    </>
   );
 }
 
